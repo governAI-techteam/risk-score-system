@@ -1,0 +1,121 @@
+.logs-panel {
+  padding: 20px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.panel-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+
+.panel-header span:first-child {
+  font-size: 18px;
+}
+
+.log-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.toggle-icon {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.logs-content {
+  overflow: hidden;
+}
+
+.logs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.log-item {
+  padding: 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--border-color);
+}
+
+.log-item:first-child {
+  border-left-color: var(--accent-cyan);
+}
+
+.log-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.log-time {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.log-action {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.log-action-safe {
+  background: var(--safe-green-dim);
+  color: var(--safe-green);
+}
+
+.log-action-warning {
+  background: var(--warning-amber-dim);
+  color: var(--warning-amber);
+}
+
+.log-action-danger {
+  background: var(--danger-red-dim);
+  color: var(--danger-red);
+}
+
+.log-score {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.log-preview {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.log-type {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 4px;
+}

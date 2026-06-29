@@ -1,0 +1,248 @@
+.reasoning-visualizer {
+  padding: 20px;
+}
+
+.reasoning-flow {
+  display: flex;
+  flex-direction: column;
+}
+
+.reasoning-step {
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.step-indicator {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  font-size: 18px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.step-indicator.completed {
+  background: var(--safe-green-dim);
+  border-color: var(--safe-green);
+}
+
+.step-indicator.active {
+  background: var(--accent-cyan-dim);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 15px var(--accent-cyan-glow);
+}
+
+.step-content {
+  flex: 1;
+  padding-bottom: 24px;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.step-number {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.step-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.step-message {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.step-details {
+  margin-top: 8px;
+}
+
+.detail-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+}
+
+.patterns-found {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pattern-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 4px 8px;
+  background: var(--danger-red-dim);
+  color: var(--danger-red);
+  border-radius: 4px;
+}
+
+.classification-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.classification-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: var(--danger-red-dim);
+  color: var(--danger-red);
+  border-radius: 4px;
+}
+
+.confidence-text {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.step-connector {
+  position: absolute;
+  left: 19px;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 40px);
+}
+
+.connector-line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(to bottom, var(--safe-green), var(--accent-cyan));
+}
+
+.connector-arrow {
+  font-size: 12px;
+  color: var(--accent-cyan);
+  position: absolute;
+  bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .step-indicator {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  
+  .step-connector {
+    left: 15px;
+  }
+}
+.reasoning-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.reasoning-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.step-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #00ff9f;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-content {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.reasoning-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* GRAPH LAYOUT */
+.graph-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* STEP */
+.graph-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* NODE */
+.node {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* COLORS */
+.node-green {
+  background: #00ff9f;
+  box-shadow: 0 0 10px #00ff9f;
+  color: black;
+}
+
+.node-red {
+  background: #ff2a6d;
+  box-shadow: 0 0 12px #ff2a6d;
+  color: white;
+}
+
+/* TEXT */
+.node-text {
+  font-size: 14px;
+  color: #ccc;
+  max-width: 500px;
+}
+
+/* ARROW */
+.arrow {
+  margin-left: 14px;
+  color: #00eaff;
+  font-size: 16px;
+  animation: pulseArrow 1s infinite;
+}
+
+@keyframes pulseArrow {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}

@@ -1,0 +1,139 @@
+.input-transform {
+  padding: 20px;
+}
+
+.transform-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--safe-green-dim);
+  border-radius: var(--radius-md);
+  color: var(--safe-green);
+  font-size: 14px;
+}
+
+.status-icon {
+  font-size: 20px;
+}
+
+.transform-grid {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.transform-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.transform-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--text-muted);
+}
+
+.box-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--danger-red);
+  margin-bottom: 12px;
+}
+
+.box-label-safe {
+  color: var(--safe-green);
+}
+
+.label-icon {
+  font-size: 14px;
+}
+
+.box-content {
+  flex: 1;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  overflow: auto;
+  max-height: 200px;
+  border: 1px solid var(--border-color);
+}
+
+.box-content pre {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.box-meta {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  text-align: right;
+}
+
+.removed-segments {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.segments-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--danger-red);
+  margin-bottom: 12px;
+}
+
+.segments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.segment-item {
+  background: var(--danger-red-dim);
+  border-left: 3px solid var(--danger-red);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 12px;
+}
+
+.segment-content {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-primary);
+  word-break: break-all;
+  margin-bottom: 6px;
+}
+
+.segment-reason {
+  font-size: 11px;
+  color: var(--danger-red);
+}
+
+@media (max-width: 768px) {
+  .transform-grid {
+    flex-direction: column;
+  }
+  
+  .transform-arrow {
+    transform: rotate(90deg);
+    padding: 8px 0;
+  }
+}

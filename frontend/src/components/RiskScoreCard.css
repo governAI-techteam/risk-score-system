@@ -1,0 +1,241 @@
+.risk-score-card {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.risk-score-content {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.risk-gauge-container {
+  flex-shrink: 0;
+}
+
+.risk-gauge {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.gauge-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gauge-score {
+  font-family: var(--font-mono);
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.gauge-score-safe {
+  color: var(--safe-green);
+  text-shadow: 0 0 20px var(--safe-green-glow);
+}
+
+.gauge-score-warning {
+  color: var(--warning-amber);
+  text-shadow: 0 0 20px var(--warning-amber-dim);
+}
+
+.gauge-score-danger {
+  color: var(--danger-red);
+  text-shadow: 0 0 20px var(--danger-red-glow);
+  animation: pulse 1s ease infinite;
+}
+
+.gauge-max {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.risk-label {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.risk-label-safe {
+  color: var(--safe-green);
+}
+
+.risk-label-warning {
+  color: var(--warning-amber);
+}
+
+.risk-label-danger {
+  color: var(--danger-red);
+}
+
+.risk-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.detail-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.detail-value {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.type-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.type-safe, .type-safe_query {
+  background: var(--safe-green-dim);
+  color: var(--safe-green);
+}
+
+.type-direct_attack {
+  background: var(--danger-red-dim);
+  color: var(--danger-red);
+}
+
+.type-indirect_attack {
+  background: rgba(138, 43, 226, 0.2);
+  color: #8a2be2;
+}
+
+.type-suspicious {
+  background: var(--warning-amber-dim);
+  color: var(--warning-amber);
+}
+
+.confidence-badge {
+  color: var(--accent-cyan);
+}
+
+.action-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.action-safe {
+  background: var(--safe-green-dim);
+  color: var(--safe-green);
+}
+
+.action-warning {
+  background: var(--warning-amber-dim);
+  color: var(--warning-amber);
+}
+
+.action-danger {
+  background: var(--danger-red-dim);
+  color: var(--danger-red);
+}
+
+.risk-factors {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.factors-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.factors-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.factor-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+}
+
+.factor-score {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--danger-red);
+}
+
+.factor-name {
+  color: var(--text-secondary);
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.scan-safe {
+  background: linear-gradient(90deg, transparent, var(--safe-green), transparent);
+}
+
+.scan-warning {
+  background: linear-gradient(90deg, transparent, var(--warning-amber), transparent);
+}
+
+.scan-danger {
+  background: linear-gradient(90deg, transparent, var(--danger-red), transparent);
+  animation: scan 2s linear infinite;
+}
+
+@media (max-width: 600px) {
+  .risk-score-content {
+    flex-direction: column;
+  }
+  
+  .risk-gauge {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .gauge-score {
+    font-size: 28px;
+  }
+}

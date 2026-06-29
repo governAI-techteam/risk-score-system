@@ -1,0 +1,171 @@
+.hallucination-panel {
+  padding: 20px;
+}
+
+.confidence-section {
+  margin-bottom: 20px;
+}
+
+.confidence-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.confidence-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.confidence-value {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.confidence-safe {
+  background: var(--safe-green-dim);
+  color: var(--safe-green);
+}
+
+.confidence-warning {
+  background: var(--warning-amber-dim);
+  color: var(--warning-amber);
+}
+
+.confidence-danger {
+  background: var(--danger-red-dim);
+  color: var(--danger-red);
+}
+
+.confidence-meta {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  text-align: right;
+}
+
+.reasoning-section,
+.interpretation-section,
+.factors-section,
+.indicators-section,
+.metrics-section {
+  margin-bottom: 16px;
+}
+
+.reasoning-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  background: var(--bg-secondary);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+}
+
+.interpretation-box {
+  padding: 12px;
+  border-radius: var(--radius-sm);
+}
+
+.interpretation-safe {
+  background: var(--safe-green-dim);
+  border-left: 3px solid var(--safe-green);
+}
+
+.interpretation-warning {
+  background: var(--warning-amber-dim);
+  border-left: 3px solid var(--warning-amber);
+}
+
+.interpretation-danger {
+  background: var(--danger-red-dim);
+  border-left: 3px solid var(--danger-red);
+}
+
+.interpretation-box p {
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.factors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.indicator-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid;
+}
+
+.indicator-high {
+  border-left-color: var(--danger-red);
+}
+
+.indicator-medium {
+  border-left-color: var(--warning-amber);
+}
+
+.indicator-low {
+  border-left-color: var(--text-muted);
+}
+
+.indicator-type {
+  font-size: 12px;
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+
+.indicator-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.metric-name {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.metric-value {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.metric-safe {
+  color: var(--safe-green);
+}
+
+.metric-warning {
+  color: var(--warning-amber);
+}
+
+.metric-danger {
+  color: var(--danger-red);
+}

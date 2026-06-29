@@ -1,0 +1,89 @@
+.apikeys-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.apikeys-manage {
+  padding: 20px;
+}
+
+/* Form */
+.key-generator-form {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .key-generator-form {
+    flex-direction: column;
+  }
+}
+
+.key-name-input {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--outline-variant);
+  color: var(--primary-container);
+  padding: 10px 16px;
+  font-family: var(--font-main);
+  font-size: 13px;
+  outline: none;
+}
+
+.key-name-input:focus {
+  border-color: var(--primary-container);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.15);
+}
+
+/* Table */
+.keys-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.keys-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  font-family: var(--font-main);
+  text-align: left;
+}
+
+.keys-table th {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--outline-variant);
+  color: var(--outline);
+  font-weight: bold;
+}
+
+.keys-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.key-name-col {
+  font-weight: bold;
+  color: var(--on-background);
+}
+
+.key-secret-col {
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--outline);
+}
+
+/* Integration */
+.apikeys-integration {
+  padding: 20px;
+}
+
+.snippet-container {
+  margin-top: 16px;
+}
+
+.font-mono {
+  font-family: monospace !important;
+}

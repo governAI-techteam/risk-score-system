@@ -1,0 +1,117 @@
+:root {
+  /* Clean Light Theme Colors */
+  --background: #f8fafc; /* Slate 50 */
+  --surface: #ffffff; /* Card White */
+  
+  --text-primary: #0f172a; /* Slate 900 */
+  --text-secondary: #475569; /* Slate 600 */
+  --text-muted: #94a3b8; /* Slate 400 */
+  
+  --primary: #4f46e5; /* Indigo 600 */
+  --primary-hover: #4338ca; /* Indigo 700 */
+  --primary-light: #e0e7ff; /* Indigo 50 */
+  
+  /* Status Color Mappings (Soft Pastels) */
+  --safe-bg: #ecfdf5;
+  --safe-text: #047857;
+  --safe-border: #a7f3d0;
+  
+  --warning-bg: #fffbeb;
+  --warning-text: #d97706;
+  --warning-border: #fde68a;
+  
+  --danger-bg: #fef2f2;
+  --danger-text: #b91c1c;
+  --danger-border: #fecaca;
+  
+  --border-color: #e2e8f0; /* Slate 200 */
+  --outline: #64748b; /* Slate 500 */
+  --outline-variant: #cbd5e1; /* Slate 300 */
+
+  /* Typography */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Spacing */
+  --gutter: 20px;
+  --margin: 32px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Remove Futuristic Scanlines & Grids */
+body::before, body::after {
+  display: none !important;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* Modern Card/Module Containers */
+.module-border {
+  border: 1px solid var(--border-color);
+  background: var(--surface);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: box-shadow 0.2s ease;
+}
+
+/* Remove corner clip clips from old cyber look */
+.module-border::before {
+  display: none !important;
+}
+
+/* Status Badges */
+.status-safe {
+  color: var(--safe-text);
+  background: var(--safe-bg);
+  border: 1px solid var(--safe-border);
+}
+
+.status-danger {
+  color: var(--danger-text);
+  background: var(--danger-bg);
+  border: 1px solid var(--danger-border);
+}
+
+.status-warning {
+  color: var(--warning-text);
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

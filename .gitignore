@@ -1,0 +1,16 @@
+# Dependency directories
+node_modules/
+
+# Production build outputs
+dist/
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Tesseract trained data
+*.traineddata
+
+# Local IDE configuration
+.vscode/
